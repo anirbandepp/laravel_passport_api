@@ -12,6 +12,6 @@ Route::post('/login', [UserController::class, 'login'])->name('login');
 Route::middleware('auth:api')->group(function () {
     Route::get('/userDetails', [UserController::class, 'userDetails'])->name('userDetails');
 
-    Route::post('/index', [PostController::class, 'index'])->name('index');
+    Route::get('/index', [PostController::class, 'index'])->name('index');
     Route::post('/store', [PostController::class, 'store'])->name('store');
 });
